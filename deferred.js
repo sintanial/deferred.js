@@ -12,6 +12,7 @@
     };
     Deferred.prototype = {
         done   : function (cb, context) {
+            context = context || window;
             this.cblist.push({'cb': cb, 'ctx': context});
             return this;
         },
