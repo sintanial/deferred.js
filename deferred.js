@@ -19,6 +19,7 @@
         resolve: function () {
             var list = this.cblist;
 
+            var argCount = 0;
 
             for (var i = 0, l = list.length; i < l; i++) {
                 var self = this;
@@ -26,7 +27,8 @@
                 (function (i) {
                     var complete = function (arg) {
                         self.args[i] = arg;
-                        if (self.args.length == l && !self.isResolved) {
+                        argCount++;
+                        if (argCount == l && !self.isResolved) {
                             self.isResolved = true;
                             self.resolver.apply(self.resolverContext, self.args);
                         }
