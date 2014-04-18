@@ -1,3 +1,7 @@
+/**
+ * @author Roman Martynov
+ * @version 1.0
+ */
 (function (window) {
     window.Deferred = function (resolver, context) {
         this.resolver = resolver;
