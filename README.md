@@ -36,7 +36,9 @@ dfd.resolve();
 // result1, result2 - результаты выполнения отложенных методов.
 // Аргументы передаются в порядке добавления отложенных методов
 // ctx - контекст передающийся в обработчик в виде this
-var dfd = new Deferred(function(result1, result2){console.log(result1, result2);}, window);
+var dfd = new Deferred(function(result1, result2){
+    console.log(result1, result2);
+}, window);
 
 // Добавление отложенного метода
 // ctx - контекст передающий в колбек в виде this
