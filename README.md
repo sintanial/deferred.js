@@ -7,6 +7,7 @@
 ##### new Deferred - Конструктор
 **handler(arg1,arg2,...,argn)** - обработчик. Вызывается после выполнения всех отложенных методов.
 arg1,arg2,...,argn - результат выполнения отложенных методов. Добавляются в таком же порядком, в каком добавлялись отложенные методы
+
 **context** - смена контекста this в методе handler.
 ```javascript
 new Deferred(handler, context = window);
@@ -15,6 +16,7 @@ new Deferred(handler, context = window);
 ##### done - Добавление отложенного метода
 **handler(complete)** - обработчик. Вызывается после выполнения всех отложенных методов.
 complete(result) - метод который необходимо вызвать для передачи результата в Deferred.
+
 **context** - смена контекста this в методе handler.
 ```javascript
 dfd.done(handler, context = window);
