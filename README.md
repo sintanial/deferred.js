@@ -10,7 +10,7 @@ arg1,arg2,...,argn - результат выполнения отложенны�
 
 **context** - смена контекста this в методе handler.
 ```javascript
-new Deferred(handler, context = window);
+var dfd = new Deferred(handler, context = window);
 ```
 
 ##### done - Добавление отложенного метода
